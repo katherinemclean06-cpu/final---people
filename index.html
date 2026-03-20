@@ -22,11 +22,31 @@
     
   a { color: white; }
      
-  .header {
+   .header {
+  position: relative;
   padding-bottom: 50px;
   padding-top: 15px;
   text-align: center;
-  background: #854287;
+  overflow: hidden;
+  background-image: url("zoe2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  .header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("zoe2.jpeg");
+  background-size: cover;
+  background-position: 53% 47%;
+
+  filter: brightness(60%); /* ONLY affects image */
+  z-index: 0;
+}
+  .header * {
+  position: relative;
+  z-index: 1;
 }
   .fa {
   padding: 5px;
@@ -48,25 +68,47 @@
 }
     
   h1 { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
   text-align: center;
-  color: #854287;
+  color: #6A251A;
   font-optical-sizing: auto;
   background-color: white;
   font-size: 95px;
-  padding: 40px;
+  padding: 10px 40px;
   font-family: "Truculenta", Georgia, serif;
   }
+  h1::before,
+h1::after {
+  content: "★";
+  color: #6A251A;
+  font-size: 40px; /* slightly bigger to match h1 */
+}
   
   h2 {
+  display: flex;
   text-align: center;
-  color: #854287;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #6A251A;
   font-optical-sizing: auto;
   background-color: white;
   font-size: 75px;
   padding: 0px;
   margin: 5px;
   font-family: "Truculenta", Georgia, serif;
+  position: relative;
   }
+  
+  h2::before,
+  h2::after {
+  content: "★";
+  color: #6A251A;
+  font-size: 30px;
+}
     
   nav {
   font-family: "Raleway", sans-serif;
@@ -74,7 +116,7 @@
   font-size: 25px;
   font-style: normal;
   text-align: center;
-  width: 900; 
+  width: 725px; 
   margin: 0 auto;
 }
   ul{
@@ -85,14 +127,18 @@
   }
   
   ul li {
-  display: block;
+ display: block;
   text-align: center;
-  padding: 25px;
+  padding: 10px 25px 15px;
   float: left;
+  line-height: 2.5;
   }
   
   ul li a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 12px;
+  text-decoration-thickness: 10px;
   color: white;
   }
   
@@ -142,7 +188,7 @@
   }
   
   footer {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   background: #854287;
   color: white;
@@ -161,7 +207,6 @@
       <nav>
         <ul>
           <li><a href="https://katherinemclean06-cpu.github.io/final-home/">HOME</a></li>
-          <li><a href="/">SHOOTS</a></li>
           <li><a href="/">PEOPLE</a></li>
           <li><a href="/">PLACES</a></li>
           <li><a href="/">NATURE</a></li>
@@ -170,7 +215,7 @@
     </nav>
   </div>
   
-  <h2>PEOPLE:</h2>
+  <h2>PEOPLE</h2>
   <div class="responsive">
     <div class="img">
       
@@ -210,8 +255,7 @@
 </div>
   
 <footer>
-  <p>Contact:</p>
-  <a href="katherinemclean06@gmail.com">katherinemclean06@gmail.com</a>
+  <p>CONTACT:    <a href="karmclea@uwaterloo.ca">karmclea@uwaterloo.ca</a></p>
 </footer>
     
   </body>
