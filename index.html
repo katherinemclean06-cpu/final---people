@@ -8,8 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <title>Photography Portfolio</title>
+    <title>Photography Portfolio</title>
   
   <style>
   
@@ -22,7 +21,7 @@
     
   a { color: white; }
      
-   .header {
+  .header {
   position: relative;
   padding-bottom: 50px;
   padding-top: 15px;
@@ -30,18 +29,15 @@
   overflow: hidden;
   background-image: url("zoe2.jpeg");
   background-size: cover;
-  background-repeat: no-repeat;
 }
   .header::before {
   content: "";
   position: absolute;
   inset: 0;
-
   background-image: url("zoe2.jpeg");
   background-size: cover;
   background-position: 53% 47%;
-
-  filter: brightness(60%); /* ONLY affects image */
+  filter: brightness(60%); 
   z-index: 0;
 }
   .header * {
@@ -53,18 +49,14 @@
   font-size: 30px;
   width: 50px;
   text-align: center;
-  text-decoration: none;
 }
 
-  .fa:hover {
-  opacity: 0.7;
-}
+  .fa:hover { opacity: 0.7; }
 
   .fa-instagram {
   color: white;
   position: absolute;
   left: 20px;
-  right: 20px;
 }
     
   h1 { 
@@ -72,79 +64,60 @@
   align-items: center;
   justify-content: center;
   gap: 25px;
-  text-align: center;
   color: #6A251A;
-  font-optical-sizing: auto;
   background-color: white;
   font-size: 95px;
   padding: 10px 40px;
   font-family: "Truculenta", Georgia, serif;
   }
-  h1::before,
-h1::after {
+    
+  h1::before, h1::after {
   content: "★";
-  color: #6A251A;
-  font-size: 40px; /* slightly bigger to match h1 */
-}
+  font-size: 40px;
+  }
   
   h2 {
   display: flex;
-  text-align: center;
-  align-items: center;
   justify-content: center;
   gap: 20px;
   color: #6A251A;
-  font-optical-sizing: auto;
   background-color: white;
   font-size: 75px;
-  padding: 0px;
   margin: 5px;
   font-family: "Truculenta", Georgia, serif;
-  position: relative;
   }
   
-  h2::before,
-  h2::after {
+  h2::before, h2::after {
   content: "★";
-  color: #6A251A;
   font-size: 30px;
 }
     
   nav {
   font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
   font-size: 25px;
-  font-style: normal;
-  text-align: center;
   width: 725px; 
   margin: 0 auto;
 }
   ul{
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   }
   
   ul li {
- display: block;
-  text-align: center;
-  padding: 10px 25px 15px;
   float: left;
-  line-height: 2.5;
+  padding: 10px 25px 15px;
   }
   
   ul li a {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  text-decoration: underline dotted;
   text-underline-offset: 12px;
   text-decoration-thickness: 10px;
   color: white;
   }
   
-  nav li a:hover {
-  color: gray;
-  }
+  nav li a:hover { color: gray; }
     
   .row {
   display: flex;
@@ -173,6 +146,35 @@ h1::after {
   transform: scale(1.1);
   filter: brightness(80%);
 }
+  
+  .lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+  
+  .lightbox:target {
+  display: flex;
+}
+    
+  .lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+  
+  .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 50px;
+  color: white;
+  text-decoration: none;
+}
+    
   @media screen and (max-width: 800px) {
   .column {
   flex: 50%;
@@ -190,13 +192,13 @@ h1::after {
   footer {
   font-size: 25px;
   text-align: center;
-  background: #854287;
+  background: #3B3939;
   color: white;
   margin-top: 15px;
-  padding-top: 25px;
-  padding-bottom: 45px;
+  padding-top: 25px 0 45px;
   }
-    </style>
+    
+  </style>
   </head>
   
 <body>
@@ -204,6 +206,7 @@ h1::after {
     <a href="https://www.instagram.com/katiemc888?igsh=OXl4aWhtemR6d20z" class="fa fa-instagram"></a>
 
       <h1>Katie McLean Photography</h1>
+      
       <nav>
         <ul>
           <li><a href="https://katherinemclean06-cpu.github.io/final-home/">HOME</a></li>
@@ -216,42 +219,212 @@ h1::after {
   </div>
   
   <h2>PEOPLE</h2>
-  <div class="responsive">
-    <div class="img">
-      
-    </div>
-  </div>
-  <div class="row">
-  <div class="column">
-  <div class="img-container"><img src="festival1.jpeg" style="width:100%" alt="A girl with blonde hair wearing blue jeans walking towards a crowd of people at a music festival."></div>
-  <div class="img-container"><img src="oliver7.png" style="width:100%" alt="Blonde-haired man looking to up at the CN Tower behind him."></div>
-  <div class="img-container"><img src="zoe2.jpeg" style="width:100%" alt="A blonde girl sitting on a wooden dock next to a lake."></div>
-  <div class="img-container"><img src="zoe4.jpeg" style="width:100%" alt="A blonde-haired girl sitting on a wooden dock next to a lake, smiling at the camera."></div>
-  <div class="img-container"><img src="oliver4.png" style="width:100%" alt="A blonde man looking to his side with a white building behind him."></div>
-  <div class="img-container"><img src="zach7.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></div>
-  <div class="img-container"><img src="zachclub.jpeg" style="width:100%" alt="Man with brown hair drinking a beer in a purple and blue lit club."></div>
-  </div>
   
-  <div class="column">
-  <div class="img-container"><img src="zach9.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></div>
-  <div class="img-container"><img src="zach5.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></div>
-  <div class="img-container"><img src="oliver3.png" style="width:100%" alt="A blonde-haired man smiling at the camera."></div>
-  <div class="img-container"><img src="zach2.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></div>
-  <div class="img-container"><img src="zoe1.jpeg" style="width:100%" alt="A blonde-haired girl sitting on a wooden dock on next to a lake."></div>
-  <div class="img-container"><img src="katie.png" style="width:100%" alt="A blonde haired girl sitting in the dark, illuminated by red light."></div>
-  <div class="img-container"><img src="zoe7.jpeg" style="width:100%" alt="A blonde-haired girl looking behind her at the orange sunset at a music festival."></div>
-  <div class="img-container"><img src="oliver8.png" style="width:100%" alt="Blonde-haired man looking at the camera with a green bush behind him."></div>
+<div class="row">
+<div class="column">
+    
+  <div class="img-container">
+  <a href="#img1"><img src="festival1.jpeg" style="width:100%" alt="A girl with blonde hair wearing blue jeans walking towards a crowd of people at a music festival."></a>
   </div>
     
-  <div class="column">
-  <div class="img-container"><img src="zach10.JPG" style="width:100%" alt="Dark-haired man grinding a rail at the skatepark on a BMX bike."></div>
-  <div class="img-container"><img src="oliver6.png" style="width:100%" alt="Blonde-haired man looking up with a green bush in front of him."></div>
-  <div class="img-container"><img src="zach11.JPG" style="width:100%" alt="Dark-haired man grinding a rail at the skatepark on a BMX bike."></div>
-  <div class="img-container"><img src="zoe5.jpeg" style="width:100%" alt="A blonde haired girl sitting on a wood bench with a green field and blue lake behind her. ."></div>
-  <div class="img-container"><img src="oliver1.jpeg" style="width:100%" alt="The shoulder of a blonde man taking a photo of the sunset in front of him."></div>
-  <div class="img-container"><img src="zoe3.jpeg" style="width:100%" alt="A blonde-haired girl sitting on a wooden dock next to a lake with her leg out, smiling at the camera."></div>
-  <div class="img-container"><img src="zach1.JPG" style="width:100%" alt="Dark-haired man popping a wheelie on a BMX bike at the skatepark."></div>
+  <div class="img-container">
+  <a href="#img2"><img src="oliver7.png" style="width:100%" alt="Blonde-haired man looking to up at the CN Tower behind him."></a>
   </div>
+    
+  <div class="img-container">
+  <a href="#img3"><img src="zoe2.jpeg" style="width:100%" alt="A blonde girl sitting on a wooden dock next to a lake."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img4"><img src="zoe4.jpeg" style="width:100%" alt="A blonde-haired girl sitting on a wooden dock next to a lake, smiling at the camera."></a>
+  </div>
+  
+  <div class="img-container">
+  <a href="#img5"><img src="oliver4.png" style="width:100%" alt="A blonde man looking to his side with a white building behind him."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img6"><img src="zach7.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img7"><img src="zachclub.jpeg" style="width:100%" alt="Man with brown hair drinking a beer in a purple and blue lit club."></a>
+  </div>
+</div>
+  
+<div class="column">
+  <div class="img-container">
+  <a href="#img8"><img src="zach9.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img9"><img src="zach5.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img10"><img src="oliver3.png" style="width:100%" alt="A blonde-haired man smiling at the camera."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img11"><img src="zach2.JPG" style="width:100%" alt="Dark-haired man jumping a ramp at the skatepark on a BMX bike."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img12"><img src="zoe1.jpeg" style="width:100%" alt="A blonde-haired girl sitting on a wooden dock on next to a lake."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img13"><img src="katie.png" style="width:100%" alt="A blonde haired girl sitting in the dark, illuminated by red light."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img14"><img src="zoe7.jpeg" style="width:100%" alt="A blonde-haired girl looking behind her at the orange sunset at a music festival."></a>
+  </div>
+  
+  <div class="img-container">
+  <a href="#img15"><img src="oliver8.png" style="width:100%" alt="Blonde-haired man looking at the camera with a green bush behind him."></a>
+  </div>
+</div>
+    
+<div class="column">
+  <div class="img-container">
+  <a href="#img16"><img src="zach10.JPG" style="width:100%" alt="Dark-haired man grinding a rail at the skatepark on a BMX bike."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img17"><img src="oliver6.png" style="width:100%" alt="Blonde-haired man looking up with a green bush in front of him."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img18"><img src="zach11.JPG" style="width:100%" alt="Dark-haired man grinding a rail at the skatepark on a BMX bike."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img19"><img src="zoe5.jpeg" style="width:100%" alt="A blonde haired girl sitting on a wood bench with a green field and blue lake behind her. ."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img20"><img src="oliver1.jpeg" style="width:100%" alt="The shoulder of a blonde man taking a photo of the sunset in front of him."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img21"><img src="zoe3.jpeg" style="width:100%" alt="A blonde-haired girl sitting on a wooden dock next to a lake with her leg out, smiling at the camera."></a>
+  </div>
+    
+  <div class="img-container">
+  <a href="#img22"><img src="zach1.JPG" style="width:100%" alt="Dark-haired man popping a wheelie on a BMX bike at the skatepark."></a>
+  </div>
+  </div>
+</div>
+
+<div id="img1" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="festival1.jpeg">
+</div>
+  
+<div id="img2" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="oliver7.png">
+</div>
+
+<div id="img3" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zoe2.jpeg">
+</div>
+  
+<div id="img4" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zoe4.jpeg">
+</div>
+  
+<div id="img5" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="oliver4.png">
+</div>
+
+<div id="img6" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zach7.JPG">
+</div>
+  
+<div id="img7" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zachclub.jpeg">
+</div>
+  
+<div id="img8" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zach9.JPG">
+</div>
+  
+<div id="img9" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zach5.JPG">
+</div>
+  
+<div id="img10" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="oliver3.png">
+</div>
+  
+<div id="img11" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zach2.JPG">
+</div>
+  
+<div id="img12" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zoe1.jpeg">
+</div>
+  
+<div id="img13" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="katie.png">
+</div>
+  
+<div id="img14" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zoe7.jpeg">
+</div>  
+
+<div id="img15" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="oliver8.png">
+</div>
+  
+<div id="img16" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zach10.JPG">
+</div>
+  
+<div id="img17" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="oliver6.png">
+</div>
+  
+<div id="img18" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zach11.JPG">
+</div>
+  
+<div id="img19" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zoe5.jpeg">
+</div>
+  
+  <div id="img20" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="oliver1.jpeg">
+</div>
+  
+<div id="img21" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zoe3.jpeg">
+</div>
+  
+<div id="img22" class="lightbox">
+  <a href="#" class="close">&times;</a>
+  <img src="zach1.JPG">
 </div>
   
 <footer>
@@ -259,4 +432,4 @@ h1::after {
 </footer>
     
   </body>
-</html>
+</html> 
